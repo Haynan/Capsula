@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --capsula-50: #f6f6f7;
+        --capsula-100: #ececef;
+        --capsula-200: #d8d9dd;
+        --capsula-300: #b4b6bd;
+        --capsula-400: #7f828e;
+        --capsula-500: #5e616c;
+        --capsula-600: #42444b;
+        --capsula-700: #2b2d31;
+        --capsula-800: #1d1e22;
+        --capsula-900: #111215;
+        --capsula-silver: #bcbec4;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply bg-[var(--capsula-50)] font-sans text-[var(--capsula-700)] antialiased;
+        background-image:
+            radial-gradient(circle at top right, rgba(188, 190, 196, 0.2), transparent 25%),
+            linear-gradient(180deg, rgba(255, 255, 255, 0.85), rgba(246, 246, 247, 1));
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        @apply text-[var(--capsula-900)];
+    }
+}
+
+@layer components {
+    .capsula-container {
+        @apply mx-auto w-full max-w-7xl px-6 lg:px-8;
+    }
+
+    .capsula-card {
+        @apply rounded-[28px] border border-white/70 bg-white/90 p-6 shadow-[0_20px_60px_rgba(17,18,21,0.06)] backdrop-blur;
+    }
+
+    .capsula-glass {
+        @apply rounded-[32px] border border-white/60 bg-white/75 shadow-[0_20px_80px_rgba(17,18,21,0.08)] backdrop-blur;
+    }
+
+    .capsula-button {
+        @apply inline-flex items-center justify-center rounded-full bg-[var(--capsula-900)] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[var(--capsula-700)] focus:outline-none focus:ring-2 focus:ring-[var(--capsula-400)] focus:ring-offset-2;
+    }
+
+    .capsula-button-secondary {
+        @apply inline-flex items-center justify-center rounded-full border border-[var(--capsula-300)] bg-white px-5 py-3 text-sm font-semibold text-[var(--capsula-800)] transition hover:border-[var(--capsula-500)] hover:text-[var(--capsula-900)];
+    }
+
+    .capsula-input {
+        @apply mt-2 block w-full rounded-2xl border-[var(--capsula-200)] bg-white/90 px-4 py-3 text-sm text-[var(--capsula-800)] shadow-sm placeholder:text-[var(--capsula-400)] focus:border-[var(--capsula-500)] focus:ring-[var(--capsula-500)];
+    }
+
+    .capsula-textarea {
+        @apply capsula-input min-h-32 resize-y;
+    }
+
+    .capsula-select {
+        @apply capsula-input;
+    }
+
+    .capsula-label {
+        @apply text-sm font-semibold text-[var(--capsula-700)];
+    }
+
+    .capsula-section-title {
+        @apply font-display text-4xl font-semibold tracking-tight text-[var(--capsula-900)] md:text-5xl;
+    }
+
+    .capsula-section-kicker {
+        @apply text-xs font-semibold uppercase tracking-[0.35em] text-[var(--capsula-500)];
+    }
+
+    .capsula-muted {
+        @apply text-sm leading-7 text-[var(--capsula-500)];
+    }
+
+    .capsula-admin-shell {
+        @apply min-h-screen bg-[radial-gradient(circle_at_top,rgba(188,190,196,0.15),transparent_30%),linear-gradient(180deg,#f8f8f9,#f2f3f5)];
+    }
+
+    .capsula-sidebar-link {
+        @apply flex items-center rounded-2xl px-4 py-3 text-sm font-medium text-[var(--capsula-500)] transition hover:bg-white hover:text-[var(--capsula-900)];
+    }
+
+    .capsula-sidebar-link-active {
+        @apply bg-white text-[var(--capsula-900)] shadow-sm;
+    }
+
+    .capsula-table {
+        @apply min-w-full divide-y divide-[var(--capsula-100)] text-sm;
+    }
+
+    .capsula-table thead th {
+        @apply px-4 py-3 text-left text-xs font-semibold uppercase tracking-[0.2em] text-[var(--capsula-500)];
+    }
+
+    .capsula-table tbody td {
+        @apply px-4 py-4 align-top text-[var(--capsula-700)];
+    }
+
+    .capsula-table tbody tr {
+        @apply border-b border-[var(--capsula-100)];
+    }
+
+    .capsula-badge {
+        @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wide;
+    }
+}
