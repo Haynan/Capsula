@@ -19,7 +19,7 @@ class SettingSeeder extends Seeder
             'instagram_url' => '',
             'facebook_url' => '',
             'linkedin_url' => '',
-            'hero_title' => 'Proteção, patrimônio e mobilidade com orientação clara em cada etapa.',
+            'hero_title' => 'Proteção, consultoria e mobilidade com orientação clara a cada etapa.',
             'hero_subtitle' => 'A Cápsula Corretora conecta seguros, consórcios, saúde e locação de longo prazo com atendimento premium e decisão bem orientada.',
             'hero_cta_text' => 'Solicitar proposta',
             'seo_home_title' => 'Cápsula Corretora | Soluções consultivas em seguros e locação',
