@@ -21,14 +21,14 @@ O projeto foi desenhado para um operador unico na V1, com foco em:
 - Tailwind CSS
 - Alpine.js
 - Livewire 3 instalado para evolucoes pontuais no admin
-- MySQL ou MariaDB
+- MySQL/MariaDB para producao na Hostinger Premium
 - Laravel Breeze com autenticacao Blade
 
 ## Requisitos
 
 - PHP 8.2 ou superior
 - Composer 2+
-- Node.js 20+ e npm
+- Node.js 20+ e npm apenas no ambiente local/de build
 - MySQL 8+ ou MariaDB compativel
 
 ## Instalacao local
@@ -60,7 +60,9 @@ php artisan key:generate
 
 ## Configuracao do `.env`
 
-O projeto esta preparado para MySQL/MariaDB, que e o alvo da Hostinger.
+O projeto esta preparado para MySQL/MariaDB em producao, que e o caminho documentado e suportado pelo plano Hostinger Premium.
+
+SQLite pode ser usado localmente para desenvolvimento e testes quando `pdo_sqlite`/`sqlite3` estiverem habilitados no PHP, mas nao deve ser tratado como banco padrao de producao na Hostinger Premium sem confirmacao direta no painel/suporte da conta. A documentacao publica do plano destaca MySQL/phpMyAdmin e limite de bancos MySQL; nao ha garantia publica equivalente para SQLite.
 
 Exemplo minimo:
 
@@ -149,6 +151,8 @@ Para producao:
 npm run build
 ```
 
+No plano Premium da Hostinger, nao dependa de Node.js no servidor para compilar assets. Rode `npm run build` localmente ou em um ambiente de CI e envie a pasta `public/build` junto com o projeto.
+
 ## Storage link
 
 Os logos de parceiros ficam no disco `public`. Gere o link simbolico:
@@ -193,18 +197,18 @@ Checklist recomendado:
 1. Criar banco MySQL/MariaDB no painel da Hostinger.
 2. Enviar o projeto para a hospedagem.
 3. Apontar o dominio para a pasta `public/`.
-4. Configurar o `.env` com as credenciais reais do banco e SMTP.
-5. Rodar:
+4. Configurar o `.env` com as credenciais reais do banco MySQL, SMTP e `APP_URL` do dominio.
+5. Garantir que `public/build` foi gerado localmente com `npm run build` e enviado para a hospedagem.
+6. Rodar no servidor via SSH:
 
 ```bash
 composer install --no-dev --optimize-autoloader
 php artisan key:generate
 php artisan migrate --seed --force
 php artisan storage:link
-npm run build
 ```
 
-6. Otimizar caches:
+7. Otimizar caches:
 
 ```bash
 php artisan config:cache
@@ -251,6 +255,9 @@ Se quiser habilitar o scheduler no futuro, use um cron simples:
 - a fila esta em `sync`
 - nao ha necessidade de worker permanente
 - nao ha dependencia de Supervisor, Horizon, Octane ou websocket
+- Node.js nao e requisito em producao; os assets compilados ficam em `public/build`
+- o banco recomendado para producao e MySQL/MariaDB da Hostinger
+- SQLite fica restrito a ambiente local/testes, salvo confirmacao explicita de suporte na conta
 - a estrutura foi pensada para operacao em hospedagem compartilhada
 
 ## Rotas principais
