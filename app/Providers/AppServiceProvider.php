@@ -9,8 +9,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Facades\Schema;
-use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
+use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -31,7 +31,7 @@ class AppServiceProvider extends ServiceProvider
         setlocale(LC_TIME, 'pt_BR.UTF-8', 'pt_BR', 'Portuguese_Brazil.1252');
 
         RateLimiter::for('public-lead-form', function (Request $request) {
-            return Limit::perMinute(5)->by($request->ip().'|'.$request->input('email'));
+            return Limit::perMinute(5)->by($request->ip() . '|' . $request->input('email'));
         });
 
         View::composer(['site.*', 'layouts.site', 'layouts.guest', 'auth.*', 'admin.configuracoes.*'], function ($view) {
@@ -46,8 +46,9 @@ class AppServiceProvider extends ServiceProvider
                 'facebook_url' => '',
                 'linkedin_url' => '',
                 'hero_title' => 'Soluções sob medida para proteger seu patrimônio e sua tranquilidade.',
-                'hero_subtitle' => 'A Cápsula Corretora organiza seu atendimento com clareza, agilidade e proximidade.',
+                'hero_subtitle' => 'A Cápsula Corretora integra seguros, consultoria financeira, saúde e mobilidade urbana em uma experiência completa e estratégica. Com atendimento premium e orientação consultiva, ajudamos você a tomar decisões bem fundamentadas para proteger seu patrimônio, sua carreira e o seu futuro em cada etapa da vida.',
                 'hero_cta_text' => 'Solicitar proposta',
+                'institutional_video_url' => 'https://www.youtube.com/watch?v=M7lc1UVf-VE',
                 'seo_home_title' => 'Cápsula Corretora | Seguros, consórcios e locação por assinatura',
                 'seo_home_description' => 'Corretora premium com atendimento consultivo para seguros, consórcios, saúde e locação de longo prazo.',
                 'seo_partners_title' => 'Parceiros | Cápsula Corretora',
