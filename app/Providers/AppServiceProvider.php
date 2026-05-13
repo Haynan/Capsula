@@ -37,7 +37,7 @@ class AppServiceProvider extends ServiceProvider
         View::composer(['site.*', 'layouts.site', 'layouts.guest', 'auth.*', 'admin.configuracoes.*'], function ($view) {
             $defaults = collect([
                 'site_name' => config('app.name'),
-                'site_tagline' => 'Seguros, consórcios e locação de longo prazo com atendimento consultivo.',
+                'site_tagline' => 'Seguros, consultoria financeira, saúde e mobilidade urbana com atendimento próximo.',
                 'company_phone' => '',
                 'company_whatsapp' => '',
                 'company_email' => '',
@@ -45,16 +45,16 @@ class AppServiceProvider extends ServiceProvider
                 'instagram_url' => '',
                 'facebook_url' => '',
                 'linkedin_url' => '',
-                'hero_title' => 'Soluções sob medida para proteger seu patrimônio e sua tranquilidade.',
+                'hero_title' => 'Proteção, consultoria e mobilidade com orientação clara a cada etapa.',
                 'hero_subtitle' => 'A Cápsula Corretora integra seguros, consultoria financeira, saúde e mobilidade urbana em uma experiência completa e estratégica. Com atendimento premium e orientação consultiva, ajudamos você a tomar decisões bem fundamentadas para proteger seu patrimônio, sua carreira e o seu futuro em cada etapa da vida.',
                 'hero_cta_text' => 'Solicitar proposta',
                 'institutional_video_url' => 'https://www.youtube.com/watch?v=M7lc1UVf-VE',
-                'seo_home_title' => 'Cápsula Corretora | Seguros, consórcios e locação por assinatura',
+                'seo_home_title' => 'Cápsula Corretora | Soluções consultivas em seguros e locação',
                 'seo_home_description' => 'Corretora premium com atendimento consultivo para seguros, consórcios, saúde e locação de longo prazo.',
                 'seo_partners_title' => 'Parceiros | Cápsula Corretora',
                 'seo_partners_description' => 'Conheça os parceiros comerciais da Cápsula Corretora.',
                 'seo_contact_title' => 'Contato | Cápsula Corretora',
-                'seo_contact_description' => 'Fale com a Cápsula Corretora e solicite sua proposta.',
+                'seo_contact_description' => 'Entre em contato com a Cápsula Corretora e solicite sua proposta.',
             ]);
 
             $settings = $defaults;

@@ -11,7 +11,7 @@ class SettingSeeder extends Seeder
     {
         $settings = [
             'site_name' => 'Cápsula Corretora',
-            'site_tagline' => 'Seguros, consórcios e locação consultiva com atendimento próximo.',
+            'site_tagline' => 'Seguros, consultoria financeira, saúde e mobilidade urbana com atendimento próximo.',
             'company_phone' => '(00) 0000-0000',
             'company_whatsapp' => '(00) 00000-0000',
             'company_email' => 'contato@capsulacorretora.com.br',

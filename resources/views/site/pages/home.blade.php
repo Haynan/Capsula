@@ -115,19 +115,19 @@
         </div>
         <div class="capsula-card">
             <h3 class="text-lg font-semibold">Leitura clara de propostas</h3>
-            <p class="mt-3 text-sm leading-7 text-[var(--capsula-500)]">Ajudamos a comparar opções, entender validade, parceiro e próxima decisão comercial.</p>
+            <p class="mt-3 text-sm leading-7 text-[var(--capsula-500)]">Traduzimos as opções, esclarecemos coberturas e custos, e comparamos cenários para que você tome decisões seguras e bem fundamentadas.</p>
         </div>
         <div class="capsula-card">
             <h3 class="text-lg font-semibold">Atendimento centralizado</h3>
-            <p class="mt-3 text-sm leading-7 text-[var(--capsula-500)]">Um fluxo simples para captar, acompanhar e registrar histórico do que foi contratado.</p>
+            <p class="mt-3 text-sm leading-7 text-[var(--capsula-500)]">Tudo organizado em um único lugar, gestão integrada dos seus seguros e serviços, com histórico completo e acesso simples para acompanhar cada contratação com clareza e controle.</p>
         </div>
         <div class="capsula-card lg:col-start-2">
             <h3 class="text-lg font-semibold">Relacionamento de longo prazo</h3>
-            <p class="mt-3 text-sm leading-7 text-[var(--capsula-500)]">Renovações, próximas ações e observações ficam organizadas para sustentar continuidade comercial.</p>
+            <p class="mt-3 text-sm leading-7 text-[var(--capsula-500)]">Acompanhamento contínuo das suas apólices, com renovações planejadas e gestão proativa para manter sua proteção sempre atualizada.</p>
         </div>
         <div class="capsula-card">
             <h3 class="text-lg font-semibold">Imagem institucional premium</h3>
-            <p class="mt-3 text-sm leading-7 text-[var(--capsula-500)]">Uma presença digital sóbria e confiável para gerar credibilidade desde o primeiro contato.</p>
+            <p class="mt-3 text-sm leading-7 text-[var(--capsula-500)]">Presença digital sóbria e confiável, com conteúdo técnico baseado em fontes das seguradoras para informar com clareza e credibilidade.</p>
         </div>
     </div>
 </section>
@@ -136,9 +136,8 @@
     <div class="capsula-card grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <div>
             <p class="capsula-section-kicker">Parceiros comerciais</p>
-            <h2 class="mt-4 text-3xl font-semibold">Relacionamento com parceiros reconhecidos do mercado.</h2>
-            <p class="mt-4 text-sm leading-7 text-[var(--capsula-500)]">Trabalhamos com seguradoras e parceiros comerciais presentes na operação da corretora.</p>
-            <a href="{{ route('site.partners') }}" class="mt-6 inline-flex text-sm font-semibold text-[var(--capsula-800)]">Ver página de parceiros</a>
+            <h2 class="mt-4 text-3xl font-semibold">Rede de parceiros reconhecidos pelo mercado.</h2>
+            <p class="mt-4 text-sm leading-7 text-[var(--capsula-500)]">Alianças estratégicas que ampliam o portfólio e garantem soluções adequadas ao momento de cada cliente.</p>
         </div>
         <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
             @foreach ($partners as $partner)
@@ -160,7 +159,7 @@
         <div class="mt-4 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div>
                 <h2 class="text-3xl font-semibold text-white">Fale com a Cápsula Corretora e receba uma proposta orientada ao seu contexto.</h2>
-                <p class="mt-4 max-w-2xl text-sm leading-7 text-white/70">Seguros, consórcios, saúde, odonto e locação de longo prazo organizados com linguagem simples e atendimento responsável.</p>
+                <p class="mt-4 max-w-2xl text-sm leading-7 text-white/70">Seguros, consultoria financeira, saúde e mobilidade urbana com linguagem simples e atendimento responsável.</p>
             </div>
             <a href="#solicitar-proposta" class="capsula-button-secondary border-white/20 bg-white/10 text-white hover:bg-white hover:text-[var(--capsula-900)]">Quero iniciar o atendimento</a>
         </div>
