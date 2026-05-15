@@ -192,11 +192,11 @@
             </details>
             <details class="capsula-card">
                 <summary class="cursor-pointer text-lg font-semibold">A locação é por diária?</summary>
-                <p class="mt-4 text-sm leading-7 text-[var(--capsula-500)]">Não. Na V1, tratamos locação como produto comercial de longo prazo, assinatura ou aluguel anual de veículos.</p>
+                <p class="mt-4 text-sm leading-7 text-[var(--capsula-500)]">Não, contrato mínimo de 12 meses com veículos zero km.</p>
             </details>
             <details class="capsula-card">
                 <summary class="cursor-pointer text-lg font-semibold">Recebo a proposta por e-mail ou WhatsApp?</summary>
-                <p class="mt-4 text-sm leading-7 text-[var(--capsula-500)]">O retorno pode acontecer por telefone, e-mail ou WhatsApp, conforme o melhor canal para conduzir a conversa comercial.</p>
+                <p class="mt-4 text-sm leading-7 text-[var(--capsula-500)]">O retorno pode acontecer por e-mail ou WhatsApp, conforme o melhor canal para conduzir a conversa comercial.</p>
             </details>
         </div>
     </div>
